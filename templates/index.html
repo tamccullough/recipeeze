@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<!-- Page content -->
+<div class="w3-content w3-padding" style="max-width:1564px">
+
+  <!-- Genres Section -->
+  <div class="w3-container w3-padding-32">
+    <form method="POST" action="/recipes">
+      <p>{{ ingredients[0:] }}</p>
+      <input class="w3-input w3-border" type="text" id="Genres" placeholder="Type some ingredients in a comma separated list" required name="ingredients" name="ingredients">
+      <button class="w3-button w3-2019-sugar-almond w3-section" type="submit">
+        <i class="fa fa-paper-plane"></i> SUBMIT
+      </button>
+    </form>
+  </div>
+
+  </div>
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<!-- Page content -->
+<div class="w3-content w3-padding" style="max-width:1564px">
+
+  <!-- Project Section -->
+  <div class="w3-container w3-padding-32" id="projects">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">{{ ingredients }}</h3>
+  </div>
+
+  <div class="w3-row-padding">
+{%for i in range(0,recipes_table.shape[0])%}
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class=" w3-display-topleft w3-2019-princess-blue w3-padding">{{ recipes_table.iloc[i,0] }}</div>
+        <a href="{{ recipes_table.iloc[i,6] }}" target="_blank">
+        <img src="{{ recipes_table.iloc[i,7] }}" alt="House" style="width:100%">
+        </a>
+      </div>
+    </div>
+{%endfor%}
+  </div>
+{% endblock %}
+<!-- {{ url_for('static', filename='img/bw-1.jpg') }} -->

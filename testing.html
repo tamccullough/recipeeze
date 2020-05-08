@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<!--
+Author: Todd McCullough using w3schools code
+Filename: base.html
+Date: 27 February 2020
+Description: Header used at the top of all pages for the site.
+-->
+<title>MoviEeze</title>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="static/css/w3.css">
+<link rel="stylesheet" href="static/css/w3-colors-flat.css">
+<link rel="stylesheet" href="static/css/w3-colors-2019.css">
+<link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Rammetto+One&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+<style>.righteous{font-family: 'Righteous', cursive;}</style>
+<style>.ramm{font-family: 'Rammetto One', cursive;}</style>
+<style>.logo{font-family: 'Lilita One', cursive;}</style>
+</head><body class="w3-flat-midnight-blue">
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-2019-toffee w3-wide w3-padding w3-card">
+    <a href="#home" class="w3-bar-item w3-button"><b>M</b>oviEeze</a>
+    <!-- Float links to the right. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+      <a href="#about" class="w3-bar-item w3-button">About</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="w3-display-container w3-content w3-wide w3-padding-32" style="max-width:1500px;" id="home">
+  <img class="w3-image" src="static/images/white.jpg" alt="Architecture" width="1500" height="200">
+  <div class="w3-display-middle w3-margin-top w3-center">
+    <br>
+    <br>
+    <br>
+    <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding logo w3-red w3-opacity-min"><b>M</b></span><span class="w3-hide-small w3-text-grey">oviEeze</span></h1>
+  </div>
+</header>
+
+<!-- Page content -->
+<div class="w3-content w3-padding" style="max-width:1564px">
+
+  <!-- Genres Section -->
+  <div class="w3-container w3-padding-32">
+    <form method="POST" action="/movies" target="_blank">
+      <input class="w3-input w3-border" type="text" id="Genres" placeholder="Type genre choices in a comma separated list" required name="Genres" name="Genres">
+      <button class="w3-button w3-2019-toffee w3-section" type="submit">
+        <i class="fa fa-paper-plane"></i> SUBMIT
+      </button>
+    </form>
+  </div>
+
+  <!-- Movie List Section -->
+  <div class="w3-container" id="projects">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Recommendations</h3>
+  </div>
+
+  <div class="w3-row-padding">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding"> Comedy</div>
+        <img src="static/images/comedy.jpg" alt="House" style="width:100%">
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding"> Horror</div>
+        <img src="static/images/horror.jpg" alt="House" style="width:100%">
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding"> Drama</div>
+        <img src="static/images/drama.jpg" alt="House" style="width:100%">
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding"> Romance</div>
+        <img src="static/images/romance.jpg" alt="House" style="width:100%">
+      </div>
+    </div>
+  </div>
+
+  </div>
+
+  <!-- About Section -->
+  <div class="w3-container w3-padding-32" id="about">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">About</h3>
+    <p>Another movie recommender? And limited to the last 10 years?</p>
+    <p>Finding the right movie so that you can CHILL on the couch can sometimes be the most frustrating of chores. I hope this helps.</p>
+    <p>I had to do this.</p>
+    <a>by Todd McCullough</a>
+    <a href="https://twitter.com/tamccullough" target="_blank"><i class="fa fa-twitter"></i></a>
+    <a href="https://twitter.com/tamccullough" target="_blank"><i class="fa fa-github"></i></a>
+    <a href="https://twitter.com/tamccullough" target="_blank"><i class="fa fa-linkedin"></i></a>
+    <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+  </div>
+
+<!-- End page content -->
+</div>
+
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-16">
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+</footer>
+
+
+</body></html>
