@@ -1,9 +1,11 @@
-### Basic SMALL Recommender
-A lot of movies have been released in the last 10 years. And there's size limits to my github account.
+### Basic Recipe Recommender
 
-SO here's a recommender for movies from the last 10 years!
+Random Roulette of users to generate recommendations for anyone.
+Enter your ingredient choices in a comma separated list and see what you get.
 
-WIP [MOVIEEZE LINK](https://movieeze.herokuapp.com/index)
+I'll implement a few things in the future to deal with NLP and make it perform even better.
+
+WIP [RECIPEEZE LINK](https://movieeze.herokuapp.com/index)
 
 #### DATA FROM
-[grouplens](https://grouplens.org/)
+[AllRecipes.com](https://www.allrecipes.com/)
