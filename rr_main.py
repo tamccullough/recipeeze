@@ -72,7 +72,7 @@ def set_up_ml(user_id,ingredient_list):
 def get_final_recommendation(list_1,list_2,list_3): # combine all recommendations
     recipe_recommendation = pd.DataFrame()
     recipe_recommendation = pd.concat([list_1,list_2,list_3]) # concat lists
-    recipe_recommendation = recipe_recommendation.drop_duplicates() # drop recommended duplicates of films
+    recipe_recommendation = recipe_recommendation.drop_duplicates(keep='first') # drop recommended duplicates of films
     recipe_recommendation = recipe_recommendation.sort_values('pred_rating',ascending=False) # sort by predicted rating
     recipe_recommendation.pop('pred_rating') # drop the rating column
     recipe_recommendation = recipe_recommendation.reset_index()
