@@ -76,15 +76,17 @@
     vertical-align: center;
   }
 
+  .bg {
+    background-image: url({{ bg_image }});
+    width: 100%;
+    height: 100%;
+  }
+
   </style>
 </head>
 
-<body id="top" class="{{ theme }}">
-  {% if theme == 'bw'%}
-  <div class="text-white" style="background: black;">
-  {% else %}
+<body id="top" class="{{ theme }} bg">
   <div class="{{theme }}-orange">
-  {% endif %}
     <nav id="top">
       <div class="logo">
         <a class="pacifico logo" href="/">Recip-Eeze</a>
@@ -114,11 +116,13 @@
 
   <!-- Footer -->
   <footer class="page80" style="border-radius: 0.5rem; padding: 20px 20px;">
-    <h4>Powered by Us</h4>
-    <a class="bold">Todd McCullough</a>
-    <a href="https://twitter.com/tamccullough" target="_blank"><i class="{{theme}} fa fa-twitter"></i></a>
-    <a href="https://github.com/tamccullough" target="_blank"><i class="{{theme}} fa fa-github"></i></a>
-    <a href="https://www.linkedin.com/in/tamccullough/" target="_blank"><i class="{{theme}} fa fa-linkedin"></i></a>
+    <div class="{{ theme }}-t-orange">
+      <h4>Powered by Us</h4>
+      <a class="bold">Todd McCullough</a>
+      <a href="https://twitter.com/tamccullough" target="_blank"><i class="{{ theme }}-t-orange fa fa-twitter"></i></a>
+      <a href="https://github.com/tamccullough" target="_blank"><i class="{{ theme }}-t-orange fa fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/tamccullough/" target="_blank"><i class="{{ theme }}-t-orange fa fa-linkedin"></i></a>
+    </div>
   </footer>
 
   <!-- End page content -->

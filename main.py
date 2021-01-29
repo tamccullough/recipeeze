@@ -17,15 +17,17 @@ theme = 'cappucino'
 
 @recipeeze.route('/')
 def index():
+    bg_image = 'static/images/emy-90710FOygrg-unsplash.jpg'
     #get the ingredients and search
     ingredients_list = ["What's in your fridge?","List a few things. example; cheddar, broccoli"]
-    return render_template('index.html',
+    return render_template('index.html', bg_image = bg_image,
     ingredients = ingredients_list,theme = theme)
 
 @recipeeze.route('/recipes', methods=['POST'])
 #@login_required
 def recipes():
     #posting the results
+    bg_image = ''
     user_1 = random.choice(users)
     user_2 = random.choice(users)
     user_3 = random.choice(users)
@@ -37,7 +39,7 @@ def recipes():
 
     final_recommendation = rr_main.get_final_recommendation(recipe_list1,recipe_list2,recipe_list3)
     return render_template('recipe.html',
-    recipes_table = final_recommendation,
+    recipes_table = final_recommendation, bg_image = bg_image,
     ingredients = ingredient_list,theme = theme)
 
 if __name__ == "__main__":
