@@ -1,72 +1,121 @@
 <!DOCTYPE html>
-<html>
-<!--
-Author: Todd McCullough using w3schools code
-Filename: base.html
-Date: 27 February 2020
-Description: Header used at the top of all pages for the site.
--->
-<title>RecipEeze</title>
+<html lang="en-US">
 <head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>W3.CSS Template</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="static/css/w3.css">
-<link rel="stylesheet" href="static/css/w3-colors-flat.css">
-<link rel="stylesheet" href="static/css/w3-colors-2019.css">
-<link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Rammetto+One&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>.righteous{font-family: 'Righteous', cursive;}</style>
-<style>.ramm{font-family: 'Rammetto One', cursive;}</style>
-<style>.pacifico{font-family: 'Pacifico', cursive;}</style>
-</head><body class="w3-2019-sweet-corn">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Recip-Eeze</title>
+  <meta name="author" content="Todd McCullough">
+  <meta name="description" content="Description.">
+  <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Anarchy-symbol-red.svg/600px-Anarchy-symbol-red.svg.png">
+  <meta property="og:description" content="Anarchy Tools.">
+  <meta property="og:title" content="Anarchy Tools">
+  <meta name="twitter:title" content="Anarchy Tools">
+  <link rel="stylesheet" href="static/css/themes.css">
+  <link rel="stylesheet" href="static/css/style.css">
+  <link rel="stylesheet" href="static/css/nav.css">
+  <link rel="stylesheet" href="static/css/menu.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Pacifico&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Slab&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Ubuntu+Mono&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&family=Neucha&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Eagle+Lake&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Coiny&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<!-- Navbar (sit on top) -->
-<div class="w3-top">
-  <div class="w3-bar w3-2019-fiesta w3-wide w3-padding w3-card">
-    <a href="/index" class="pacifico w3-bar-item w3-button"><b>R</b>ecipEeze</a>
-    <!-- Float links to the right. Hide them on small screens -->
-    <div class="w3-right w3-hide-small">
-      <a href="#about" class="pacifico w3-bar-item w3-button">About</a>
-    </div>
+  <style>
+
+  :root {
+    --blue: .{{ theme }}-blue;
+  }
+
+  html,h2 {
+    font-family: 'Pacifico', cursive;
+    font-weight: 400;
+  }
+
+  h1 {
+    font-family: 'Merriweather', serif;
+  }
+
+  body,h3,h4,h5 {
+    font-family: 'Merriweather', serif;
+    font-weight: 400;
+  }
+
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #0099ff #3c2f2f;
+  }
+
+  .bold {
+    font-weight: 700;
+  }
+
+  strong {
+    color: #f07924;
+  }
+
+  .pacifico {
+    font-family: 'Pacifico', cursive;
+    font-weight: 400;
+    font-size: 1.5em;
+    letter-spacing: -1px;
+    vertical-align: center;
+  }
+
+  </style>
+</head>
+
+<body id="top" class="{{ theme }}">
+  {% if theme == 'bw'%}
+  <div class="text-white" style="background: black;">
+  {% else %}
+  <div class="{{theme }}-orange">
+  {% endif %}
+    <nav id="top">
+      <div class="logo">
+        <a class="pacifico logo" href="/">Recip-Eeze</a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#design">Vegetarian</a></li>
+        <li><a href="#consul">Noodles</a></li>
+        <li><a href="#data">Rice</a></li>
+        <li><a href="#ml">Eggs</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+      <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+    </nav>
   </div>
+
+<button id="backToTop" class="topbutton {{ theme }}-blue textcenter">
+  <a class="button text-white" href="#top">TOP</a>
+</button>
+
+{% block content %}
+
+{% endblock %}
+
+  <!-- Footer -->
+  <footer class="page80" style="border-radius: 0.5rem; padding: 20px 20px;">
+    <h4>Powered by Us</h4>
+    <a class="bold">Todd McCullough</a>
+    <a href="https://twitter.com/tamccullough" target="_blank"><i class="{{theme}} fa fa-twitter"></i></a>
+    <a href="https://github.com/tamccullough" target="_blank"><i class="{{theme}} fa fa-github"></i></a>
+    <a href="https://www.linkedin.com/in/tamccullough/" target="_blank"><i class="{{theme}} fa fa-linkedin"></i></a>
+  </footer>
+
+  <!-- End page content -->
 </div>
-
-<!-- Header -->
-<header class="w3-display-container w3-content w3-wide w3-padding-32" style="max-width:1500px;" id="home">
-  <img class="w3-image" src="static/images/bg.jpg" alt="Architecture" width="1500" height="200">
-  <div class="w3-display-middle w3-margin-top w3-center">
-    <br>
-    <br>
-    <br>
-    <h1 class="w3-xxlarge w3-text-white"><span class="pacifico w3-xxxlarge w3-text-red"><b>R</b></span><span class="pacifico w3-hide-small w3-text-red">ecipEeze</span></h1>
-  </div>
-</header>
-
-{% block content %}{% endblock %}
-
-  <!-- About Section -->
-  <div class="w3-container w3-padding-32" id="about">
-    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">About</h3>
-    <p>Recipe Recommender</p>
-    <p>Pandemic lockdowns aren't much fun.</p>
-    <p>maybe there is a recipe on allrecipes.com?</p>
-    <p>I hope this helps.</p>
-    <a>by Todd McCullough</a>
-    <a href="https://twitter.com/tamccullough" target="_blank"><i class="fa fa-twitter"></i></a>
-    <a href="https://twitter.com/tamccullough" target="_blank"><i class="fa fa-github"></i></a>
-    <a href="https://twitter.com/tamccullough" target="_blank"><i class="fa fa-linkedin"></i></a>
-
-<!-- End page content -->
-</div>
-
-
-<!-- Footer -->
-<footer class="pacifico w3-center w3-2019-fiesta w3-padding-16">
-  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
-</footer>
-
-
-</body></html>
+<script src="static/css/app.js"></script>
+<script src="static/css/top.js"></script>
+</body>
+</html>

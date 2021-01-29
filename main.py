@@ -13,12 +13,14 @@ ratings = pd.read_csv('datasets/ratings-s.csv')
 users = ratings.userid.unique()
 
 recipeeze = Flask(__name__)
+theme = 'cappucino'
 
-@recipeeze.route('/index')
+@recipeeze.route('/')
 def index():
     #get the ingredients and search
     ingredients_list = "What's in your fridge? List a few things."
-    return render_template('index.html', ingredients = ingredients_list)
+    return render_template('index.html',
+    ingredients = ingredients_list,theme = theme)
 
 @recipeeze.route('/recipes', methods=['POST'])
 #@login_required
@@ -34,7 +36,9 @@ def recipes():
     recipe_list3 = rr_main.set_up_ml(user_3,ingredient_list)
 
     final_recommendation = rr_main.get_final_recommendation(recipe_list1,recipe_list2,recipe_list3)
-    return render_template('recipe.html',recipes_table = final_recommendation,ingredients = ingredient_list)
+    return render_template('recipe.html',
+    recipes_table = final_recommendation,
+    ingredients = ingredient_list,theme = theme)
 
 if __name__ == "__main__":
     recipeeze.run()

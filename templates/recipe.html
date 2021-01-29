@@ -1,25 +1,56 @@
 {% extends 'base.html' %}
 {% block content %}
+<!-- !PAGE CONTENT! -->
+<!-- app display -->
+<div class="container">
+<div class="spacer"></div>
 
 <!-- Page content -->
-<div class="w3-content w3-padding" style="max-width:1564px">
+<div class="page80" style="min-height: 75vh;">
 
   <!-- Project Section -->
-  <div class="w3-container w3-padding-32" id="projects">
-    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">{{ ingredients }}</h3>
+  <div class="{{ theme }}-light">
+    <br>
+    <h3 class="text-white" style="text-indent: 25px;">{{ ingredients }}</h3>
+    <br>
   </div>
 
-  <div class="w3-row-padding">
-{%for i in range(0,recipes_table.shape[0])%}
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class=" w3-display-topleft w3-2019-princess-blue w3-padding">{{ recipes_table.iloc[i,0] }}</div>
-        <a href="{{ recipes_table.iloc[i,6] }}" target="_blank">
+  <div class="mobile">
+    <div class="parent">
+      {%for i in range(0,recipes_table.shape[0])%}
+      <div class="boxs borderc">
+        <div class="{{ theme }}-dark" style="height:6vh;">
+          <h4 class="text-white">{{ recipes_table.iloc[i,0] }}</h4>
+          <a href="{{ recipes_table.iloc[i,6] }}" target="_blank"></a>
+        </div>
+        <div class="center des-img" style="height:15vh;overflow:hidden;">
+          <img src="{{ recipes_table.iloc[i,7] }}" alt="House" style="width:100%">
+        </div>
+      </div>
+      {%endfor%}
+    </div>
+  </div>
+
+<div class="desktop">
+  <div class="parent">
+    {%for i in range(0,recipes_table.shape[0])%}
+    <div class="box borderc">
+      <div class="{{ theme }}-dark" style="height:6vh;">
+        <h4 class="text-white">{{ recipes_table.iloc[i,0] }}</h4>
+        <a href="{{ recipes_table.iloc[i,6] }}" target="_blank"></a>
+      </div>
+      <div class="center des-img" style="height:15vh;overflow:hidden;">
         <img src="{{ recipes_table.iloc[i,7] }}" alt="House" style="width:100%">
-        </a>
       </div>
     </div>
-{%endfor%}
+    {%endfor%}
   </div>
+</div>
+
+</div>
+</div>
+
+<div class="container">
+<!-- end of about section -->
+
 {% endblock %}
-<!-- {{ url_for('static', filename='img/bw-1.jpg') }} -->

@@ -1,19 +1,27 @@
 {% extends 'base.html' %}
 {% block content %}
+<!-- !PAGE CONTENT! -->
+<!-- app display -->
+<div class="spacerL"></div>
+<div class="container">
+<div class="spacer"></div>
 
 <!-- Page content -->
-<div class="w3-content w3-padding" style="max-width:1564px">
-
-  <!-- Genres Section -->
-  <div class="w3-container w3-padding-32">
-    <form method="POST" action="/recipes">
-      <p>{{ ingredients[0:] }}</p>
-      <input class="w3-input w3-border" type="text" id="Genres" placeholder="Type some ingredients in a comma separated list" required name="ingredients" name="ingredients">
-      <button class="w3-button w3-2019-sugar-almond w3-section" type="submit">
-        <i class="fa fa-paper-plane"></i> SUBMIT
-      </button>
-    </form>
-  </div>
+  <div class="page80" style="height: 75vh;">
+    <!-- Search Section -->
+    <div>
+      <form method="POST" action="/recipes">
+        <p>{{ ingredients[0:] }}</p>
+        <input class="borderc {{ theme }}-light inputbox" style="width: 90%;" type="text" id="Genres" name="ingredients" placeholder="Type some ingredients in a comma separated list" autocomplete="off" required>
+        <button class="borderc {{ theme }}-action button" style="width: 8%;height:40px;" type="submit">
+          <i class="white fa fa-paper-plane"></i></button>
+      </form>
+    </div>
 
   </div>
+</div>
+
+<div class="container">
+<!-- end of about section -->
+
 {% endblock %}
