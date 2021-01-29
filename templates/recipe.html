@@ -20,8 +20,7 @@
       {%for i in range(0,recipes_table.shape[0])%}
       <div class="boxs borderc">
         <div class="{{ theme }}-dark" style="height:6vh;">
-          <h4 class="text-white">{{ recipes_table.iloc[i,0] }}</h4>
-          <a href="{{ recipes_table.iloc[i,6] }}" target="_blank"></a>
+          <h4><a class="text-white link" href="{{ recipes_table.iloc[i,6] }}" target="_blank">{{ recipes_table.iloc[i,0] }}</a></h4>
         </div>
         <div class="center des-img" style="height:15vh;overflow:hidden;">
           <img src="{{ recipes_table.iloc[i,7] }}" alt="House" style="width:100%">
@@ -36,8 +35,7 @@
     {%for i in range(0,recipes_table.shape[0])%}
     <div class="box borderc">
       <div class="{{ theme }}-dark" style="height:6vh;">
-        <h4 class="text-white">{{ recipes_table.iloc[i,0] }}</h4>
-        <a href="{{ recipes_table.iloc[i,6] }}" target="_blank"></a>
+        <h4><a class="text-white link" href="{{ recipes_table.iloc[i,6] }}" target="_blank">{{ recipes_table.iloc[i,0] }}</a></h4>
       </div>
       <div class="center des-img" style="height:15vh;overflow:hidden;">
         <img src="{{ recipes_table.iloc[i,7] }}" alt="House" style="width:100%">

@@ -18,7 +18,7 @@ theme = 'cappucino'
 @recipeeze.route('/')
 def index():
     #get the ingredients and search
-    ingredients_list = "What's in your fridge? List a few things."
+    ingredients_list = ["What's in your fridge?","List a few things. example; cheddar, broccoli"]
     return render_template('index.html',
     ingredients = ingredients_list,theme = theme)
 

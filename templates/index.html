@@ -11,7 +11,9 @@
     <!-- Search Section -->
     <div>
       <form method="POST" action="/recipes">
-        <p>{{ ingredients[0:] }}</p>
+        <p>{{ ingredients[0] }}
+        <br>{{ ingredients[1] }}</p>
+        <div class="spacer"></div>
         <input class="borderc {{ theme }}-light inputbox" style="width: 90%;" type="text" id="Genres" name="ingredients" placeholder="Type some ingredients in a comma separated list" autocomplete="off" required>
         <button class="borderc {{ theme }}-action button" style="width: 8%;height:40px;" type="submit">
           <i class="white fa fa-paper-plane"></i></button>

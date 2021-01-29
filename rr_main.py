@@ -79,4 +79,4 @@ def get_final_recommendation(list_1,list_2,list_3): # combine all recommendation
     recipe_recommendation.pop('index') # reset and pop the old index
     recipe_recommendation.pop('itemid')
     #recipe_recommendation['total time'] = recipe_recommendation['prep_time']+recipe_recommendation['cook_time']
-    return recipe_recommendation
+    return recipe_recommendation.drop_duplicates()
