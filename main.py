@@ -18,9 +18,10 @@ theme = 'cappucino'
 @recipeeze.route('/')
 def index():
     bg_image = 'static/images/emy-90710FOygrg-unsplash.jpg'
+    bg_mobile = 'static/images/food-photographer-david-fedulov-h-R_D-zD8KQ-unsplash.jpg'
     #get the ingredients and search
     ingredients_list = ["What's in your fridge?","List a few things. example; cheddar, broccoli"]
-    return render_template('index.html', bg_image = bg_image,
+    return render_template('index.html', bg_image = bg_image, bg_mobile = bg_mobile,
     ingredients = ingredients_list,theme = theme)
 
 @recipeeze.route('/recipes', methods=['POST'])
